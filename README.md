@@ -8,6 +8,7 @@ This sample is an example of running an AI container on the Jetson platform.  Th
 - Samsung NVMe 512 GB to store docker images
 - 16 GB swap file on NVMe mount
 - [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-apt#manual-install-instructions) for pushing image to Azure Container Registry
+- [Optional] Docker may be configured to run with non-root user as in [Manage Docker as a non-root user](https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user) allowing the omission of using `sudo` with docker
 
 ## Build image
 
@@ -95,6 +96,8 @@ docker rm my_yolo_container
 ## Upload docker image to Azure container registry
 
 Follow instruction in [Push and Pull Docker images - Azure Container Registry](http://docs.microsoft.com/en-us/azure/container-registry/container-registry-get-started-docker-cli) to save your image for later use on another machine.
+
+IMPORTANT:  Docker may need to be configured to run with non-root user as in [Manage Docker as a non-root user](https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user).
 
 ## Deploy as an Azure IoT Edge module
 
