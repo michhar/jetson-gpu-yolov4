@@ -2,6 +2,8 @@
 
 This sample is an example of running an AI container on the Jetson platform.  This container utilizes the GPU on the Jetson (with NVIDIA drivers, CUDA and cuDNN installed) using an NVIDIA L4T (linux for Tegra) base image with TensorFlow 2 installed.  The Jetson must have been flashed with Jetpack 4.4.
 
+The model used in this project is converted from the [original Darknet tiny YOLO v4 weights](https://github.com/AlexeyAB/darknet#pre-trained-models), trained on the COCO dataset and able to recognize the [80 COCO classes](https://github.com/hunglc007/tensorflow-yolov4-tflite/blob/master/data/classes/coco.names).  To train on your own dataset see [https://github.com/michhar/yolov4-darknet-notes](https://github.com/michhar/yolov4-darknet-notes).
+
 ## Xavier Setup
 
 - Flashed with JetPack 4.4 (L4T R32.4.3) with all ML and CV tools (including `nvidia-docker`)
@@ -118,6 +120,7 @@ sudo docker exec -it my_yolo_container /bin/bash
 - [`darknet` implementation for YOLOv4](https://github.com/AlexeyAB/darknet)
 - [TensorFlow YOLOv4 converters and implementations](https://github.com/hunglc007/tensorflow-yolov4-tflite)
 - [Live Video Analytics on Edge documentation](https://docs.microsoft.com/en-us/azure/media-services/live-video-analytics-edge/)
+- [A method to train a tiny YOLO v4 model on your own data](https://github.com/michhar/yolov4-darknet-notes)
 
 ## Credits
 
